@@ -1,0 +1,46 @@
+<view class="cont">
+     <view class="a">
+        <!--判断时间切换图片wx:if="{{}}"-->
+          <!--<image class="a_img"  src="../../images/shangwu.png"></image>-->
+          <text>{{info.thedate}}</text>
+     </view>
+     <view class="a">
+          <text>{{info.timedesc}}</text>
+     </view>
+<view class="b">请选择座位</view>
+
+<view class="tab-left" bindtap="tabFun">
+  <view wx:for="{{list}}" data-statu="open" bindtap="{{item.state==0? 'powerDrawer' : ''}}" class="n {{item.state==1? 'actives' : tabArr.curHdIndex==item.id? 'active' : ''}}" data-id="{{item.id}}" data-tablenum="{{item.tablenum}}" data-tabletype="{{item.tabletype}}" data-price="{{item.price}}">
+  <view>{{item.tablenum}}</view>{{item.tabletype}}</view>
+</view> 
+
+  <!--<button form-type="submit"  class="start-pay"  data-statu="open" bindtap="powerDrawer">去付款</button>-->
+
+
+<view class="cll">{{mini.title}}</view>
+<view class="cl">客服热线：{{mini.tel}}</view>
+<!--</view>-->
+
+
+
+<!--遮盖层-->
+<view class="drawer_screen"
+  data-statu="close"
+ wx:if="{{showModalStatus}}" bindtap="powerDrawer">
+ </view> 
+
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
+ <view class="c">
+     <view class="d">提示</view>
+     <view class="e">
+          你选择的是{{tablenum}}{{tabletype}}，是否确认？
+     </view>
+    <view class="f">
+          <view class="f_a" bindtap="">支付预定金
+            <view class="">(￥100元)</view>
+          </view>
+          <view class="f_b" bindtap="tiqian">提前点餐</view>
+    </view>
+    </view>
+    </view>
+</view>

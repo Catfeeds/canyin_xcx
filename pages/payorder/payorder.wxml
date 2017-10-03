@@ -1,0 +1,94 @@
+<!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
+<view class="payorder">
+  <!-- <view class="restaurant">
+    {{ order.restaurant }}
+  </view>
+  <view class="ocunt">
+    <text>已点{{ order.count }}个菜</text>
+    <text>订单号{{ order.number }}</text>
+  </view> -->
+  <view class="orderList">
+    <view class="time">
+      当前时间:{{ nowtime }}
+    </view>
+    <view class="orderList-item">
+      <view class="orderList-item-top">
+        <text>菜品</text>
+        <text>数量</text>
+        <text>金额</text>
+      </view>
+      <view class="orderList-item-one" wx:for="{{ pro }}">
+        <text>{{ item.name }}</text>
+        <text>{{ item.num }}</text>
+        <text>{{ item.zprice }}</text>
+      </view>
+      <view class="orderList-item-one">
+        <text>配送费</text>
+        <text></text>
+        <text>{{yunfei}}</text>
+      </view>
+    </view>
+    <view class="bottom">
+      <text>总价</text>
+      <text style="color:red;">{{ total }}</text>
+    </view>
+  </view>
+  <view class="tip">实付金额以买单时为准
+    <text wx:if="{{ptime>0}}">（ 预计{{ptime}}分钟送达 ）</text>
+  </view>
+ 
+ <form bindsubmit="reg" >
+ 
+<!--判断如果是预定提前点餐就隐藏否则显示预定信息-->
+    <view class="" >
+      <view class="restaurant">
+        联系人:
+      </view>
+    <view class="xing">
+         <text>姓名:</text><input name="name" value="{{addressInfo.name}}" />
+    </view>
+
+    <view class="xing">
+          <text>手机:</text><input name="tel" value="{{addressInfo.tel}}" />
+    </view>
+    <view class="restaurant">
+        收货地址:
+        <view class="" bindtap="address" style="float:right;padding-right:44rpx;">更多></view>
+    </view>
+
+    <view class="xing">
+          <text>详细地址:</text>
+          <input name='address' value='{{address}}'/>
+          <!-- <image bindtap="an" class="map" src="../../images/map.png"></image> -->
+    </view>
+
+    <view class="xing">
+          <text>备注信息:</text><input name="remark" value="" placeholder="调味选择，用餐人数" />
+    </view>
+</view>
+
+<!--预定信息-->
+<view class="y" wx:if="{{kk>2}}">
+  <view class="y_a">预定信息</view>
+    <view class="y_b">
+      桌位号：100号桌
+    </view>
+    <view class="y_b">
+      姓名：wz.文
+    </view>
+    <view class="y_b">
+      手机号：1232432432
+    </view>
+    <view class="y_b">
+      用餐时间:7月18日18：40
+    </view>
+        <view class="y_b">
+      用餐人数:10
+    </view>
+        <view class="y_b">
+      备注信息：2321321
+    </view>
+</view>
+  <button form-type="submit" class="start-pay">微信付款</button>
+</form>
+</view>

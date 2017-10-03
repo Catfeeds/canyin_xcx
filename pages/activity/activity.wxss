@@ -1,0 +1,48 @@
+.activity_center image {
+  width: 100%;
+  height: 250rpx;
+}
+.activity_center {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 40rpx;
+}
+.activity {
+  height: 100%;
+  padding: 20rpx;
+  background: #eee;
+}
+page {
+  font-size: 28rpx;
+  font-family: "微软雅黑";
+}
+.button button{
+  background: orange;
+  padding: 0 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 0;
+}
+.button {
+  float: right;
+  margin-top: -70rpx;
+}
+.text_center {
+  font-size: 35rpx;
+  font-weight: 700;
+  margin-top: 10rpx;
+  display:block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.text_bottom {
+  margin-top: 10rpx;
+   color: #999;
+   overflow:hidden;
+text-overflow:ellipsis;
+display:-webkit-box;
+-webkit-line-clamp:2;
+-webkit-box-orient:vertical;
+
+}

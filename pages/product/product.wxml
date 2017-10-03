@@ -1,0 +1,34 @@
+<view class="cont">
+     <!--轮播-->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='width:100%;height:800rpx;'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="a">
+      <view class="a_b">{{info.name}}</view>
+      <view class="a_c">{{info.content}}</view>
+    <!--购买商品按钮-->
+
+    <view class="mon">
+      <view class="yuan">
+          ￥{{info.price_yh}}
+      </view>
+      <view class="stepper">
+        <!-- 减号 -->
+        <text  class="op {{minusStatuses[index]}}" data-alpha-beta="0" bindtap="changeNum">-</text>
+        <!-- 数值 -->
+        <view class="nownum">{{buynum}}</view>
+        <!-- 加号 -->
+        <text class="oq normal" data-alpha-beta="1" bindtap="changeNum">+</text>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="bottom_a" bindtap="ydzw">预订座位</view>
+    <view class="bottom_b" bindtap="addShopCart" data-type="addcart">加入购物车</view>
+  </view>
+</view>

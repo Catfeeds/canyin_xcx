@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/address/address",
+    "pages/address/user-address/user-address",
+    "pages/events/events",
+    "pages/ritual/ritual",
+    "pages/coupon/coupon",
+    "pages/detail/detail",
+    "pages/product/product",
+    "pages/activity/activity",
+    "pages/particulars/particulars",
+    "pages/dinner/dinner",
+    "pages/time_quantum/time_quantum",
+    "pages/payorder/payorder",
+    "pages/order/detail",
+    "pages/ordering/ordering",
+    "pages/category/index",
+    "pages/logs/logs",
+    "pages/dingdan/dingdan",
+    "pages/synopsis/synopsis",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8A519",
+    "navigationBarTitleText": "餐饮版",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#FF8C00",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/shou.png",
+        "selectedIconPath": "./images/s.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/dingdan/dingdan",
+        "iconPath": "images/ding.png",
+        "selectedIconPath": "images/dingg.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/g.png",
+        "selectedIconPath": "images/gg.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "debug": false
+}

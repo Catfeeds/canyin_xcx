@@ -1,0 +1,92 @@
+/*轮播*/
+page{
+  font-family: '微软雅黑'
+}
+
+.address{
+  background: rgba(0, 0, 0, 0.5);
+margin:30rpx 25rpx;
+width:93%;
+position: absolute;
+top: 317rpx;
+left: 0rpx;
+color: #fff;
+font-size: 30rpx;
+}
+.slide-image {
+margin:30rpx 25rpx;
+width:93%;
+height:89%;
+margin-bottom:44rpx;
+/*border-radius:20rpx;*/
+
+}
+
+
+.system{
+  width: 95%;
+  margin: 0rpx 40rpx;
+}
+.system_ding{
+   width: 50%;
+   text-align: center;
+   display: inline-block;
+   height: 200rpx;
+   /*border-radius:20rpx; */
+}
+.system_img{
+width:96%;
+height:95%;
+margin:10rpx;
+border-radius:10rpx;
+  /*box-shadow: 2px 2px 15px #909090;*/
+
+}
+
+
+
+/*滑动*/
+.sc {
+  white-space: nowrap;
+  height:350rpx;
+  background: #fff
+}
+
+.miu {
+  width: 28%;
+  height: 100%;
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-left: 35rpx;
+  margin-right: 0px;
+
+}
+.ie{
+    width:200rpx;
+    height: 200rpx;
+}
+.mi{
+    display: block;
+    height: 10%;
+    text-align: center;
+    font-weight: 700;
+    /*padding: 10rpx 0;*/
+    font-size: 28rpx;
+    color:#707070;
+}
+.ma{
+    height: 10%;
+    text-align: center;
+    font-weight: 700;
+    padding: 10rpx 0;
+    font-size: 30rpx;
+    display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.xian {
+  width: 100%;
+  height: 14rpx;
+  background: #f0f0f0;
+}
+.classname {
+  margin-top:20rpx;
+}

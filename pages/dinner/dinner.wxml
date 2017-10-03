@@ -1,0 +1,54 @@
+<view class="cont">
+     <view class="a">
+     <!--店铺loge-->
+         <image src="{{img.photo}}"></image>
+     </view>
+         <!-- <view class="a_b">鱼香楼为你提供健康绿色的美食</view> -->
+         <view class="a_c">（请留下你宝贵的联系方式已便你能快速用餐）</view>  
+ <form bindsubmit="reg">
+ 
+  <!--<view class="restaurant">
+    联系人:
+  </view>-->
+ 
+<view class="xing">
+      <text>姓名:</text><input placeholder="请输入你的姓名" name="name" value=""/>
+ </view>
+
+ <view class="xing">
+      <text>手机:</text><input placeholder="请输入你的手机号码" name="tel" value="" />
+ </view>
+
+ 
+<view class="xing">
+  <picker mode="date" value="{{date}}" start="{{date}}" end="{{offtime}}" bindchange="bindDateChange">
+    <view class="nb">
+      日期选择: <text style="margin-left:50rpx">{{date}}</text>
+    </view>
+  </picker>
+</view>
+<view class="xing">
+  <picker bindchange="bindChange" value="{{listIndex}}" range="{{listArr}}" data-id="{{listId[listIndex]}}">
+    <view class="picker">
+      时间段：{{listArr[listIndex]}}
+      <input hidden="true" name="timeid" value="{{listId[listIndex]}}"/>
+    </view>
+  </picker>
+</view>
+<view class="xing">
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+      预计到店: <text style="margin-left:50rpx">{{time}}</text>
+    </view>
+  </picker>
+</view>
+ <view class="xing">
+      <text>用餐人数:</text><input name="people" type="number" placeholder-class='input-placeholder' placeholder="请输入用餐人数"/>
+ </view>
+ <view class="xing">
+      <text>备注信息:</text><input name="remark" placeholder-class='input-placeholder' placeholder="请留下您的备注信息"/>
+ </view>
+<button class="but" form-type="submit" >下一步</button>
+</form>
+
+</view>

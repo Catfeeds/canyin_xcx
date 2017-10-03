@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <!--轮播-->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='width:100%;height:200px;'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.photo}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+<!-- 
+<view class="address">
+地址：广州市天河区泰安和路口123号
+</view> -->
+
+<!--方形-->
+  <view class="system">
+    <view class="system_ding" wx:for="{{indeximg}}" >
+      <image data-id="{{item.id}}" bindtap="system" class="system_img" src="{{item.photo}}" data-ptype="{{item.ptype}}">
+      </image>
+    </view>
+  </view>
+  <!--我是一条分割线-->
+  <view class="xian"></view>
+  
+  <view class="classname">{{mini.classname}}</view>
+
+<!--横滑动-->  
+    <scroll-view scroll-x="true" class="sc" >
+      <view class="miu" wx:for="{{prolist}}" data-id="{{item.id}}" data-name="{{item.name}}" bindtap='jj'> 
+        <image src="{{item.photo_x}}" class="ie"></image>
+        <viem class='mi'>{{item.cname}}</viem>
+        <viem class='ma'>{{item.name}}</viem> 
+      </view> 
+    </scroll-view>
+</view>

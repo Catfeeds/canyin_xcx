@@ -1,0 +1,13 @@
+<view class="activity">
+
+  <view class="activity_center" wx:for="{{list}}" bindtap="details" data-id="{{item.id}}"><!--循环-->
+    <image src="{{item.photo}}"></image>
+    <view class="text">
+      <view class="text_left">
+        <view class="text_center">{{item.name}}</view>
+        <view class="text_bottom">{{item.digest}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

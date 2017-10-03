@@ -1,0 +1,36 @@
+<!--pages/user/user.wxml-->
+<view class="page">
+    <view class="userinfo">
+			<image class="userinfo-avatar fl_l" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+			<text class="fl_l">{{userInfo.nickName}}</text></view>
+
+<view class="qbdd mt10">
+ <navigator url="../synopsis/synopsis">
+    <span class="font_14 c3">关于我们</span>
+    <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+    </navigator>
+    </view>
+    <view class="qbdd mt10">
+ <navigator url="../coupon/coupon">
+    <span class="font_14 c3">优惠劵</span>
+    <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+    </navigator>
+    </view>
+    <view class="qbdd mt10">
+ <navigator url="../address/user-address/user-address">
+    <span class="font_14 c3">地址管理</span>
+    <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+    </navigator>
+    </view>
+    <!-- <view class="qbdd mt10">
+ <navigator url="../events/events">
+    <span class="font_14 c3">活动信息</span>
+    <span class="fl_r c9 font_12 l_h20" hover-class="none"> ></span>
+    </navigator>
+    </view> -->
+</view>
+
+
+    <view class="lll">
+       <image src="../../images/kf.png"> <contact-button></contact-button>  <contact-button></contact-button></image>
+    </view>

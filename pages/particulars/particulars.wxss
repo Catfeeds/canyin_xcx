@@ -1,0 +1,30 @@
+.h1 {
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 40rpx;
+  font-family: "微软雅黑";
+  font-weight: 700;
+}
+.h3 {
+  margin-top: 10rpx;
+}
+.time {
+  display: flex;
+}
+.time view {
+  width: 46%;
+  text-align: center;
+  color: #999;
+}
+page {
+  font-size: 32rpx;
+  font-family: "微软雅黑";
+}
+.particulars {
+  padding: 0 20rpx;
+  padding-bottom: 20rpx;
+}
+.img {
+  width: 100%;
+  height: 500rpx;
+}

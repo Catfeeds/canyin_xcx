@@ -1,0 +1,23 @@
+ <!-- 效果4 begin -->
+      <view class="stamp stamp04" wx:for="{{vou}}">
+       
+       <view class="">
+       
+        <view class="par">
+          <p>{{item.title}}</p>
+          <sub class="sign">￥</sub><span>{{item.amount}}</span>
+          <sub>优惠券</sub>
+          <p>满{{item.full_money}}元可用</p>
+        </view>
+        <view class="copy">副券
+          <p>{{item.start_time}}</p>
+          <p>{{item.end_time}}</p>
+          <a href="#" bindtap="getvou" data-vid="{{item.id}}" wx:if="{{item.point==0}}">立即领取</a>
+          <a href="#" bindtap="getvou" data-vid="{{item.id}}" wx:else>积分兑换</a>
+        </view>
+        <!--<i></i>-->
+        </view>
+        <!--<view class="xian"></view>-->
+      </view>
+      <!-- 效果4 end -->
+

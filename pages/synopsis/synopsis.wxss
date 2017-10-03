@@ -1,0 +1,36 @@
+.page {
+  width: 93%;
+  height:100%;
+background: #fff;
+padding: 0 30rpx;    font-family: "微软雅黑", "黑体";
+} 
+.ld{
+text-align:center;
+font-size: 34rpx;
+color: #000000;
+padding: 30rpx 0;
+}
+.d{
+text-align: center;
+font-size: 34rpx;color: #000000;
+padding: 30rpx 0;
+
+
+}
+p{
+  display: block;
+
+}
+.ming{
+    padding: 20rpx 0;
+    text-align: center;
+    font-size: 45rpx;
+    font-weight: 700;
+    color:#000000;
+}
+.img{
+    width: 140rpx;
+    height: 140rpx;
+    margin: 0 auto;
+display: block;
+}

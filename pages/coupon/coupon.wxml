@@ -1,0 +1,89 @@
+
+<view class="tab" >
+  <!--头部-->
+  <view class="tab-left" bindtap="tabFun">
+    <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}} a" id="tab-hd01" data-id="0">
+      未使用
+    </view>
+    <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}} a" id="tab-hd02" data-id="1">
+      已使用
+    </view>
+    <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}} a" id="tab-hd03" data-id="2">
+      已过期
+    </view>
+  </view>
+</view>
+
+<view class="mei" wx:if="{{kk}}">
+  <image src="../../images/xiii.png"></image>
+  <view class="zan">暂时没有优惠劵</view>
+</view>
+
+<view >
+<view class="tab-right" >
+  
+  <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+    <view class="demo">
+      <!-- 效果4 begin -->
+      <view class="stamp stamp04" wx:for="{{vou}}">
+        <view class="par">
+          <p>{{item.title}}</p>
+          <sub class="sign">￥</sub><span>{{item.amount}}</span>
+          <sub>优惠券</sub>
+          <p>满{{item.full_money}}元可用</p>
+        </view>
+        <view class="copy">副券
+          <p>{{item.start_time}}</p>
+          <p>{{item.end_time}}</p>
+          <a href="#" bindtap="usevou">立即使用</a>
+        </view>
+        <!--<i></i>-->
+      </view>
+      <!-- 效果4 end -->
+    </view>
+  </view>
+<!--two-->
+  <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+    <view class="demo">
+      <!-- 效果4 begin -->
+      <view class="stamp stamp04" wx:for="{{vouused}}">
+        <view class="par">
+          <p>{{item.title}}</p>
+          <sub class="sign">￥</sub><span>{{item.amount}}</span>
+          <sub>优惠券</sub>
+          <p>满{{item.full_money}}元可用</p>
+        </view>
+        <view class="copy">副券
+          <p>{{item.start_time}}</p>
+          <p>{{item.end_time}}</p>
+          <a href="#">已使用</a>
+        </view>
+        <!--<i></i>-->
+      </view>
+      <!-- 效果4 end -->
+    </view>
+  </view>
+<!--three-->
+
+  <view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+    <view class="demo">
+      <!-- 效果4 begin -->
+      <view class="stamp stamp04" wx:for="{{offvou}}">
+        <view class="par">
+          <p>{{item.title}}</p>
+          <sub class="sign">￥</sub><span>{{item.amount}}</span>
+          <sub>优惠券</sub>
+          <p>满{{item.full_money}}元可用</p>
+        </view>
+        <view class="copy">副券
+          <p>{{item.start_time}}</p>
+          <p>{{item.end_time}}</p>
+          <a href="#">已过期</a>
+        </view>
+        <!--<i></i>-->
+      </view>
+      <!-- 效果4 end -->
+    </view>
+  </view>
+</view>
+</view>

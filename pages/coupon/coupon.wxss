@@ -1,0 +1,202 @@
+page{
+  font-family: "微软雅黑"
+}
+
+
+/*切换*/
+.img{
+  height: 50rpx;
+  width: 50rpx;
+  display: block;
+  margin: 0 auto;
+}
+.tab {
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  z-index:100;
+   background: #fff;
+   height: 80rpx;
+}
+
+.tab-left {
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #ccc;
+  line-height: 80rpx;
+}
+
+.tab-left .a {
+ text-align: center;
+  display: inline-block;
+  width: 33.333%;
+} 
+
+.tab-left .active {
+  color: #f00;
+}
+
+.tab-right {
+  line-height: 108%;
+  padding-top: 80rpx;
+}
+
+.tab-right .right-item {
+  /*padding: 15rpx; */
+  display: none;
+}
+
+.tab-right .right-item.active {
+  display: block;
+  background: white;
+}
+
+
+
+
+/*优惠劵*/
+
+.demo {
+	width:100%;
+	margin:0 auto;
+}
+.stamp  {
+	padding: 0;
+	margin: 0;
+	list-style:none;
+	font-family:"Microsoft YaHei", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+}
+.stamp {
+	height: 250rpx;
+	margin-bottom: 100rpx;
+	position: relative;
+	overflow: hidden;
+}
+.stamp:before {
+	content: '';
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:20rpx;
+	right:20rpx;
+	z-index: -1;
+}
+.stamp i {
+	position: absolute;
+	left: 20%;
+	top: 90rpx;
+	height: 190px;
+	width: 780rpx;
+	background-color: rgba(255, 255, 255, .15);
+	transform: rotate(-30deg);
+}
+.stamp .par {
+	float: left;
+	padding: 25rpx 30rpx;
+	width: 58%;
+	border-right:4rpx dashed rgba(0, 0, 0, .3);
+	text-align: left;
+}
+.stamp .par p {
+	color:#fff;
+	font-size: 32rpx;
+	line-height: 30rpx;
+}
+.stamp .par span {
+	font-size: 70rpx;
+	color:#fff;
+	margin-right: 10rpx;
+	line-height: 130rpx;
+}
+.stamp .par .sign {
+	font-size: 50rpx;
+}
+.stamp .par sub {
+	position: relative;
+	top:-5px;
+	color:rgba(255, 255, 255, .8);
+  font-size: 30rpx;
+}
+.stamp .copy {
+	display: inline-block;
+	padding:42rpx 28rpx;
+	width:25%;
+	vertical-align: text-bottom;
+	font-size: 60rpx;
+	color:rgb(255,255,255);
+	text-align: center;
+	line-height: initial;
+}
+
+
+
+.stamp04 {
+width:92%;
+margin-top:10rpx;
+background:radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0,0, 0) 3px, #da0909 3px);
+/*background-size:24rpx 16rpx;*/
+background-position:-10rpx 0rem;
+margin:40rpx 33rpx;
+
+}
+.stamp04:before {
+	background-color:#da0909;
+	left: 10rpx;
+	right: 10rpx;
+}
+.stamp04 .copy {
+	padding: 20rpx 12rpx 20rpx 24rpx;
+	font-size:32rpx;
+  padding-top: 20rpx;
+}
+.stamp04 .copy p {
+	font-size: 22rpx;
+	margin-top: 10rpx;
+	margin-bottom: 15rpx;
+}
+.stamp04 .copy a {
+	background-color:#fff;
+	color:#333;
+	font-size: 28rpx;
+	text-decoration:none;
+	padding:10rpx 20rpx;
+	border-radius:6rpx;
+	display: block;
+}
+p{
+  display: block
+}
+
+/*广告*/
+.cla{
+   width: 100%;
+   height: 300rpx;
+   position: absolute;
+   bottom: 1%;
+}
+.cla image{
+   width: 100%;
+   height: 100%;
+}
+
+
+.mei{
+  width: 100%;
+  height: 300rpx;
+text-align: center;
+}
+.mei image{
+  width: 300rpx;
+  height: 300rpx;
+  position: relative;
+  top: 180rpx;
+
+}
+.zan{
+    position: relative;
+  top: 200rpx;
+  color: #ccc
+
+}

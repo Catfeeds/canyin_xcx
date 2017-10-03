@@ -1,0 +1,73 @@
+<!--pages/user/dingdan.wxml-->
+<view class="swiper-tab">
+  <!--图文详情头部-->
+  <view class="tab-left">
+    <view class="swiper-tab-list {{tabArr.curHdIndex=='0'? 'active' : ''}}" bindtap="tabFun" id="tab-hd01" data-id="0" data-otype="pay">待付款</view>
+    <view class="swiper-tab-list {{tabArr.curHdIndex=='1'? 'active' : ''}}" bindtap="tabFun" id="tab-hd02" data-id="1" data-otype="deliver">待配送</view>
+    <view class="swiper-tab-list {{tabArr.curHdIndex=='5'? 'active' : ''}}" bindtap="tabFun" id="tab-hd05" data-id="5" data-otype="recing">配送中</view>
+    <view class="swiper-tab-list {{tabArr.curHdIndex=='2'? 'active' : ''}}" bindtap="tabFun" id="tab-hd03" data-id="2" data-otype="receive">已预订</view>
+    <view class="swiper-tab-list {{tabArr.curHdIndex=='3'? 'active' : ''}}" bindtap="tabFun" id="tab-hd04" data-id="3" data-otype="finish">已完成</view>
+    <!-- <view class="swiper-tab-list {{tabArr.curHdIndex=='4'? 'active' : ''}}" bindtap="tabFun" id="tab-hd05" data-id="4" data-otype="raback">退款售后</view> -->
+  </view>
+</view>
+
+<!-- 退款订单 -->
+<view class="tab-right" wx:if="{{isStatus=='raback'}}">
+    <!--内容-->
+    <view class="search_no" wx:if="{{!orderReList.length}}">
+      <view class="font_14">
+        <image class="scimg" src="/images/dui.png"></image>
+      </view>
+      <text>没有退款订单/(ㄒoㄒ)/~~</text>
+    </view>
+    <view class="shop df" wx:for="{{orderReList}}" wx:if="{{orderReList}}">
+      <view class="" style="flex:0.5">
+        <image class="sh_slt" src="{{item.photo_x}}"></image>
+      </view>
+      
+      <view class="df_1">
+        <view class="sp_text">
+          <navigator url="../product/detail?productId={{item.pid}}" hover-class="changestyle">
+            <view class="sp_tit ovh1">{{item.name}}</view>
+          </navigator>
+          <view class="sp_neb"> 产品：×{{item.pro_count}} <text wx:if="{{item.pro_buff}}">属性：{{item.pro_buff}}</text></view>
+          <view class="sp_jg">¥ {{item.price}}</view>
+          <view class="font_12 red fl_r mr_5" style="color:red;" wx:if="{{item.back=='2'}}">已退款</view>
+          <view class="font_12 red fl_r mr_5" style="color:red;" wx:else>退款处理中</view>
+        </view>
+      </view>
+    </view>
+</view>
+
+<!-- 正常订单 -->
+<view class="tab-right" wx:else>
+    <!--内容-->
+    <view class="search_no" wx:if="{{!orderList.length}}">
+      <view class="font_14">
+        <image class="scimg" src="/images/dui.png"></image>
+      </view>
+      <text>没有可用订单/(ㄒoㄒ)/~~</text>
+    </view>
+    <view class="shop df" wx:for="{{orderList}}" wx:if="{{orderList}}">
+    <view class="">
+      <image class="sh_slt" src="{{item.photo_x}}"></image>
+    </view>
+
+      <view class="df_1">
+        <view class="sp_text">
+          <navigator url="../product/product?productId={{item.pid}}" hover-class="changestyle">
+            <view class="sp_tit ovh1">{{item.name}}</view>
+          </navigator>
+          <view class="sp_neb"> 产品：×{{item.pro_count}} <text wx:if="{{item.pro_buff}}">属性：{{item.pro_buff}}</text></view>
+          <view class="sp_jg">¥ {{item.price}}</view>
+          <view class="font_12 red fl_r" bindtap="payOrderByWechat" data-orderid="{{item.id}}" data-ordersn="{{item.order_sn}}" wx:if="{{item.status==10}}">微信支付</view>
+          <view class="font_12 red fl_r mr_5" bindtap="removeOrder" data-order-id="{{item.id}}" wx:if="{{item.status==10}}">取消订单</view>
+          <view class="font_12 red fl_r mr_5" bindtap="recOrder" data-order-id="{{item.id}}" wx:if="{{item.status==30 && item.order_type=='1'}}" data-otype="{{item.order_type}}">确认送达</view>
+          <view class="font_12 red fl_r mr_5" bindtap="recOrder" data-order-id="{{item.id}}" wx:if="{{item.status==30 && item.order_type=='2'}}" data-otype="{{item.order_type}}">确认消费</view>
+          <!-- <view class="font_12 red fl_r mr_5" bindtap="goback" data-order-id="{{item.id}}" wx:if="{{item.status>10 && item.status<40}}">退款退货</view> -->
+          <navigator url="../order/detail?orderId={{item.id}}" class="font_12 red fl_r mr_5">订单详情</navigator>
+        </view>
+      </view>
+    </view>
+</view>
+

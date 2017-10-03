@@ -1,0 +1,30 @@
+.a{
+  margin-bottom:100rpx;
+  background: #ccc;
+}
+
+
+.a_b{
+    width: 100%;
+    height: 100rpx
+}
+.a_c{
+  width: 100%;
+  height: 300rpx;
+}
+.a_d{
+  float: left;
+  background:rgba(0, 0, 0, 0.5);
+  height: 50rpx;
+  position: relative;
+  top: -60rpx;
+  color: #fff;
+  width: 100%;
+  padding-left: 20rpx;
+
+}
+.a_e{
+font-size: 32rpx;
+margin: 0 30rpx;
+margin-bottom: 30rpx;
+}

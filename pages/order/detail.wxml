@@ -1,0 +1,83 @@
+<!-- 可用组件：https://mp.weixin.qq.com/debug/wxadoc/dev/component/ -->
+<view class="payorder">
+  <!-- <view class="restaurant">
+    {{ order.restaurant }}
+  </view> -->
+  <view class="ocunt">
+    <text>菜单数量：{{ orderData.procount }}</text>
+    <text>订单号: {{ orderData.order_sn }}</text>
+  </view>
+  <view class="orderList">
+    <view class="time">
+      下单时间:{{ orderData.addtime }}
+    </view>
+    <view class="orderList-item">
+      <view class="orderList-item-top">
+        <text>菜品</text>
+        <text>数量</text>
+        <text>金额</text>
+      </view>
+      <view class="orderList-item-one" wx:for="{{proData}}">
+        <text>{{ item.name }}</text>
+        <text>{{ item.num }}</text>
+        <text>{{ item.zprice }}</text>
+      </view>
+      <view class="orderList-item-one">
+        <text>配送费</text>
+        <text></text>
+        <text>{{orderData.yunfei}}</text>
+      </view>
+    </view>
+    <view class="bottom">
+      <text>总价</text>
+      <text style="color:red;">{{ orderData.amount }}</text>
+    </view>
+  </view>
+  <view class="tip">实付金额以买单时为准</view>
+ 
+<!--判断如果是预定提前点餐就隐藏否则显示预定信息-->
+    <view class="" >
+      <view class="restaurant">
+        配送信息:
+      </view>
+    
+    <view class="xing">
+          <text style="color:gray;">姓   名：</text>{{orderData.receiver}}
+    </view>
+
+    <view class="xing">
+          <text style="color:gray;">手   机：</text>{{orderData.tel}}
+    </view>
+    <view class="xing">
+          <text style="color:gray;">配送地址：</text>{{orderData.address_xq}}
+    </view>
+    <view class="xing">
+          <text style="color:gray;">备注信息：</text>
+          {{orderData.remark}}
+    </view>
+
+</view>
+
+<!--预定信息-->
+  <view class="y" wx:if="{{kk>2}}">
+    <view class="y_a">预定信息</view>
+      <view class="y_b">
+        桌位号：100号桌
+      </view>
+      <view class="y_b">
+        姓名：wz.文
+      </view>
+      <view class="y_b">
+        手机号：1232432432
+      </view>
+      <view class="y_b">
+        用餐时间:7月18日18：40
+      </view>
+          <view class="y_b">
+        用餐人数:10
+      </view>
+          <view class="y_b">
+        备注信息：2321321
+      </view>
+  </view>
+</view>

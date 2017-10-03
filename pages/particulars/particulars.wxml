@@ -1,0 +1,13 @@
+<view class="particulars">
+  <view class="h1">
+    <view class="h2">{{info.name}}</view>
+  </view>
+  <view class="time">
+    <view class="time_contre">浏览：{{info.click}}</view>
+    <view class="time_right">{{info.addtime}}</view>
+  </view>
+</view>
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="wxParse" style="padding:0 20rpx 20rpx 20rpx;">
+  <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>

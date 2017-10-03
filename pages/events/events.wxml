@@ -1,0 +1,30 @@
+<view class="cont">
+<!--活动信息-->
+     <!--<view class="a">
+        <image class='a_b' src="http://i03.pic.sogou.com/bb4dcb81e278e897"></image>
+     </view>-->
+
+
+<!--店铺活动-->
+<black wx:for="{{ab}}" >
+<view class="" bindtap="a" data-id="{{item.id}}" 
+>
+
+
+      <image      class='a_c'src="http://i03.pic.sogou.com/fcaea69749c58fe3"></image>
+  <view class="a_d">周年店庆活动</view>
+
+      <view class="a_e" wx:if="{{item.huo}}" >
+活动信息
+[网络]	Events; Event Info; Event Information; Activities; action message;
+[例句]您还将随时获得乐施会在当地的最新活动信息。
+You'll also be kept in touch with local Oxfam events.
+      </view>
+</view>
+
+</black>
+
+
+
+
+</view>
